@@ -30,11 +30,11 @@ public class Counter {
             System.exit(1);
         }
 
-        StringBuilder fileString = new StringBuilder();
+        StringBuilder fileStream = new StringBuilder();
         try{
             Scanner fileReader = new Scanner(file);
                 while (fileReader.hasNextLine()) {
-                    fileString.append(fileReader.nextLine().toLowerCase());
+                    fileStream.append(fileReader.nextLine());
                 }
             fileReader.close();
         }
@@ -43,17 +43,17 @@ public class Counter {
             System.exit(1);
         }
 
-        char[] data = fileString.toString().toCharArray();
+        char[] charArray = fileStream.toString().toLowerCase().toCharArray();
         Hashtable<String, Integer> bins = new Hashtable<>();
 
-        for (char item : data){
-            String stringItem = item + "";
-            stringItem = stringItem.replaceAll("[^a-zA-Z]", "");
-            if(bins.containsKey(stringItem)){
-                bins.put(stringItem, bins.get(stringItem) + 1);
+        for (char character : charArray){
+            String stringChar = character + "";
+            stringChar = stringChar.replaceAll("[^a-zA-Z]", "");
+            if(bins.containsKey(stringChar)){
+                bins.put(stringChar, bins.get(stringChar) + 1);
             }
-            else if (!stringItem.equals("")){
-                bins.put(stringItem, 1);
+            else if (!stringChar.equals("")){
+                bins.put(stringChar, 1);
             }
         }
 
