@@ -6,7 +6,7 @@ public class Message {
 
         return switch (lang) {
             case "sp" -> "¡Hola, Mundo!";
-            case "fr" -> "Bonjour, le monde!";
+            case "fr" -> "Bonjour, le Monde!";
             case "en" -> "Hello, World!";
             default -> "!";
         };

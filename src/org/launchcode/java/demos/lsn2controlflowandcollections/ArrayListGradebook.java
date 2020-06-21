@@ -1,6 +1,7 @@
 package org.launchcode.java.demos.lsn2controlflowandcollections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayListGradebook {
@@ -8,7 +9,7 @@ public class ArrayListGradebook {
     public static void main(String[] args) {
 
         ArrayList<String> students = new ArrayList<>();
-        ArrayList<Double> grades = new ArrayList<>();
+        ArrayList<Float> grades = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         String newStudent;
 
@@ -27,20 +28,22 @@ public class ArrayListGradebook {
         // Get student grades
         for (String student : students) {
             System.out.print("Grade for " + student + ": ");
-            Double grade = input.nextDouble();
+            float grade = input.nextFloat();
             grades.add(grade);
         }
 
         // Print class roster
         System.out.println("\nClass roster:");
-        double sum = 0.0;
+        float sum = 0.0f;
 
         for (int i = 0; i < students.size(); i++) {
             System.out.println(students.get(i) + " (" + grades.get(i) + ")");
             sum += grades.get(i);
         }
 
-        double avg = sum / students.size();
-        System.out.println("Average grade: " + avg);
+        float avg = sum / students.size();
+        System.out.println("Average grade: " + String.format("%.3f", avg));
+
+        input.close();
     }
 }
