@@ -34,7 +34,7 @@ public class Counter {
         try{
             Scanner fileReader = new Scanner(file);
                 while (fileReader.hasNextLine()) {
-                    fileString.append(fileReader.nextLine());
+                    fileString.append(fileReader.nextLine().toLowerCase());
                 }
             fileReader.close();
         }
