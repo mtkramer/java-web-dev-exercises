@@ -8,9 +8,16 @@ import java.util.Scanner;
 
 public class Counter {
     public static void main(String[] args){
-        File file = null;
+        File FILE = null;
+        String FILE_NAME = "text.txt";
+        String DATA = "If the product of two terms is zero then common sense says at least one " +
+                "of the two terms has to be zero to start with.\nSo if you move all the terms over to " +
+                "one side, you can put the quadratics into a form that can be factored\nallowing that side " +
+                "of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.";
+        StringBuilder fileStream = new StringBuilder();
+
         try{
-            file = new File("text.txt");
+            FILE = new File(FILE_NAME);
         }
         catch(Exception e){
             System.out.println("File already exists");
@@ -19,10 +26,7 @@ public class Counter {
 
         try{
             FileWriter fileWriter = new FileWriter("text.txt");
-                fileWriter.write("If the product of two terms is zero then common sense says at least one " +
-                        "of the two terms has to be zero to start with.\nSo if you move all the terms over to " +
-                        "one side, you can put the quadratics into a form that can be factored\nallowing that side " +
-                        "of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.");
+                fileWriter.write(DATA);
             fileWriter.close();
         }
         catch(Exception e){
@@ -30,9 +34,8 @@ public class Counter {
             System.exit(1);
         }
 
-        StringBuilder fileStream = new StringBuilder();
         try{
-            Scanner fileReader = new Scanner(file);
+            Scanner fileReader = new Scanner(FILE);
                 while (fileReader.hasNextLine()) {
                     fileStream.append(fileReader.nextLine());
                 }
