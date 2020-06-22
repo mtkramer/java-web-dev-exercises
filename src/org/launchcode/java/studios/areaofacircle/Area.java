@@ -22,8 +22,3 @@ public class Area {
         input.close();
     }
 }
-
-/*
-Write a class, Area, that prompts the user for the radius of a circle and
-then calculate its area and print the result.
- */
