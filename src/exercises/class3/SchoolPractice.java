@@ -13,9 +13,3 @@ public class SchoolPractice {
     }
 
 }
-
-/*
-What access modifier restricts access the most for what we need?
-If it is a field, could we restrict the access to private and use getters and setters?
-If we do set fields to private, what access level do we have to give our getters and setters?
- */
