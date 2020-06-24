@@ -3,7 +3,9 @@ package exercises;
 import java.util.*;
 
 public class ArrayListPractice {
+
     public static void main(String[] args) {
+
         List<Integer> intList = new ArrayList<>(
                 Arrays.asList(4,7,23,4,7,9,1,6,23,8,3,78,24,8,780)
         );
