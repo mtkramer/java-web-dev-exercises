@@ -2,7 +2,7 @@ package exercises.class3;
 
 public class Student {
 
-    private String name;
+    public String name;
     private int studentId;
     private int numberOfCredits;
     private double gpa;
@@ -17,9 +17,6 @@ public class Student {
         this(name, studentId, 0,0.0);
     }
 
-    public String getName(){
-        return this.name;
-    }
     public int getStudentId(){
         return this.studentId;
     }
@@ -33,7 +30,7 @@ public class Student {
     public void setName(String aName){
         this.name = aName;
     }
-    public void setStudentId(int aStudentId){
+    private void setStudentId(int aStudentId){
         this.studentId = aStudentId;
     }
     public void setNumberOfCredits(int aNumberOfCredits){

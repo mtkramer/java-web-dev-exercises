@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Course{
 
-    List<String> registeredStudents;
-    double credit = 5;
-    double hoursPerWeek = 6;
+    private List<String> registeredStudents;
+    private final double credit = 5;
+    private final double hoursPerWeek = 6;
 
     public List<String> getRegisteredStudents() {
         return registeredStudents;
@@ -19,7 +19,7 @@ public class Course{
     }
 
     public void addStudent(Student student){
-        this.registeredStudents.add(student.getName());
+        this.registeredStudents.add(student.name);
     }
 
 }
