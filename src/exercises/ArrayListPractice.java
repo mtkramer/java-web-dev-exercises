@@ -18,30 +18,38 @@ public class ArrayListPractice {
 
     }
 
-    static void sumEvens(List<Integer> list){
+    static void sumEvens(List<Integer> intList){
         int sum = 0;
-        for (Object num : list) {
+        for (Object num : intList) {
             if ((int) num % 2 == 0) {
                 sum += (int) num;
             }
         }
-        System.out.println(sum);
+        System.out.println("The sum of the data in intList is: " + sum);
     }
 
-    static void printFiveLetterWords(List<String> list){
-        for (Object word : list){
-            if (word.toString().length() == 5){
+    static void printFiveLetterWords(List<String> wordList){
+        String userString;
+        int userChoice;
+        Scanner input = new Scanner(System.in);
+            System.out.println("Please enter your string to check.");
+            userString = input.nextLine();
+            System.out.println("What word length would you like to search for?");
+            userChoice = input.nextInt();
+        input.close();
+
+        if (userString.length() > 0){
+            wordList = Arrays.asList(userString.split("[^a-zA-Z]"));
+        }
+        else{
+            System.out.println("No string entered, using default wordList");
+        }
+
+        for (Object word : wordList) {
+            if (word.toString().length() == userChoice) {
                 System.out.println(word);
             }
         }
     }
 
 }
-
-/*
-Write a static method to print out each word in a list that has exactly 5 letters.
-Modify your code to prompt the user to enter the word length for the search.
-BONUS: Instead of creating our own list of words, what if we want to use the string from the Array Practice
-section? Search “Java convert String to ArrayList” online to see how to split a string into the more flexible
-ArrayList collection.
- */
