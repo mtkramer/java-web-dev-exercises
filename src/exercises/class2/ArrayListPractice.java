@@ -15,7 +15,8 @@ public class ArrayListPractice {
                 Arrays.asList(
                         "Write", "a", "static", "method", "to", "print", "out", "each", "word",
                         "in", "a", "list", "that", "has", "exactly", "letters"
-                ));
+                )
+        );
         printFiveLetterWords(wordList);
 
     }
