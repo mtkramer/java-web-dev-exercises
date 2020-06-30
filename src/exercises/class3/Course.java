@@ -1,6 +1,7 @@
 package exercises.class3;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Course{
 
@@ -22,4 +23,27 @@ public class Course{
         this.registeredStudents.add(student.name);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return Double.compare(course.credit, credit) == 0 &&
+                Double.compare(course.hoursPerWeek, hoursPerWeek) == 0 &&
+                Objects.equals(registeredStudents, course.registeredStudents);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(registeredStudents, credit, hoursPerWeek);
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "registeredStudents=" + registeredStudents +
+                ", credit=" + credit +
+                ", hoursPerWeek=" + hoursPerWeek +
+                '}';
+    }
 }
