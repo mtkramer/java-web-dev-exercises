@@ -9,9 +9,6 @@ public class Quiz {
     //  Tester responses
     private ArrayList<String> responses = new ArrayList<>();
 
-    //  Answers
-    String[] ANSWER_KEY = {"t", "b", "a,c,d"};
-
     //  Questions
     final Question q1 = new Question(
             "bool",
