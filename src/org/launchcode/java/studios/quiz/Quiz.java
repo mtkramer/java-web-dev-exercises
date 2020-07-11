@@ -129,7 +129,7 @@ public class Quiz {
             }
             questionIndex++;
         }
-        System.out.println("\n*====================================================");
+        System.out.println("\n====================================================");
         System.out.print("You got " + numberCorrect + " correct of " + numberOfQuestions + " for a ");
         System.out.printf("%.2f", (float) numberCorrect / numberOfQuestions * 100);
         System.out.println("% score!!");
