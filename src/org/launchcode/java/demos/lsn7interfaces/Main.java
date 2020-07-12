@@ -18,6 +18,12 @@ public class Main {
         for(Cone cone : cones){
             System.out.println(cone.getCost());
         }
+
+        ArrayList<Topping> toppings = menu.getToppings();
+        toppings.sort(new ToppingComparator());
+        for(Topping topping : toppings){
+            System.out.println(topping.getName());
+        }
     }
 
 }
