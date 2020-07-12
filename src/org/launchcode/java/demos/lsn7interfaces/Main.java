@@ -1,7 +1,6 @@
 package org.launchcode.java.demos.lsn7interfaces;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Main {
 
@@ -11,7 +10,7 @@ public class Main {
         ArrayList<Flavor> flavors = menu.getFlavors();
         flavors.sort(new FlavorComparator());
         for(Flavor flav : flavors){
-            System.out.println(flav.getName());
+            System.out.println(flav.getAllergens());
         }
 
         ArrayList<Cone> cones = menu.getCones();

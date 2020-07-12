@@ -6,6 +6,15 @@ public class FlavorComparator implements Comparator<Flavor> {
 
     @Override
     public int compare(Flavor o1, Flavor o2) {
+        return o1.getAllergens().size() - o2.getAllergens().size();
+    }
+
+
+    /*
+    @Override
+    public int compare(Flavor o1, Flavor o2) {
         return o1.getName().compareTo(o2.getName());
     }
+    */
+
 }
