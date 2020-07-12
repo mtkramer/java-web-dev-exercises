@@ -8,5 +8,4 @@ public class Cone extends Ingredient {
         super (aName, aCost, someAllergens);
     }
 
-
 }
